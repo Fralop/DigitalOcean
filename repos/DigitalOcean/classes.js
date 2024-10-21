@@ -1,1 +1,1 @@
-const div 
+const div = document.querySelector('div');
