@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Learning the DOM</title>
+  </head>
+
+  <body>
+    <h1>Todo list</h1>
+    <ul>
+        <li>Buy groceries</li>
+        <li>Feed the cat</li>
+        <li>Do laundry</li>
+      </ul>
+
+    <script>
+        const todoList = document.querySelector('ul');
+
+        const newTodo = document.createElement('li');
+        newTodo.textContent = 'Do homework';
+        todoList.appendChild(newTodo);
+
+        const anotherTodo = document.createElement('li');
+        anotherTodo.textContent = 'Pay bills';
+        todoList.insertBefore(anotherTodo, todoList.firstElementChild);
+
+        const modifiedTodo = document.createElement('li');
+        modifiedTodo.textContent = 'Feed the dot';
+        todoList.replaceChild(modifiedTodo, todoList.children[2]);
+
+        todoList.removeChild(todoList.lastElementChild);
+        todoList.children[1].remove();
+    </script>
+  </body>
+
+</html>
